@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Bot</title>
+
+    <link rel="stylesheet" href="static/css/chat.css">
+    <link rel="stylesheet" href="static/css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.0.1/ionicons.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+
+</head>
+
+<body>
+    <!-- CHAT BAR BLOCK -->
+    <div id="termsModal" class="terms">
+        <div class="title">Terms And Condition</div>
+        <div class="text">
+            <div class="bold">Turms of Condishun an' Pribacy Polisy</div>
+            <br><br>
+
+            Welcum to our webbsite! Befor using our servises, pleaze read these Turms of Condishun an' Pribacy Polisy
+            carfully.
+            <br><br>
+
+            <div class="bold">1. Akseptanse of Turms</div> <br>
+            By axising an' using our webbsite, yu agree to be bound by thees turms an' condishuns ("Turms"). If yu dont
+            agree wit these Turms, pleaze do not use the webbsite.
+            <br><br>
+            <div class="bold">2. Changs to Turms </div><br>
+            We may modify or updayte these Turms at anytimes witout priur notice. Yu shuld revizit this page regulary to
+            ensure yu are awar of any changs.
+            <br><br>
+            <div class="bold"> 3. Pribacy Polisy</div> <br>
+            Yuor privasy is importent to us. Our Pribacy Polisy explans how we collict, use, an' protekt yuor personal
+            informashun. By using the webbsite, yu consent to the processin of yuor informashun as set out in the
+            Pribacy Polisy.
+            <br><br>
+            <div class="bold">4. Akount Registreshun </div><br>
+            Yu may be requird to regista an akount to axis certain features of the webbsite. Yu are responsibl for
+            maintaining the confidensiality of yuor akount informashun an' passwerd an' for all activities that ocur
+            under yuor akount.
+            <br><br>
+            <div class="bold">5. Usar Content </div><br>
+            Yu may post or upload content (like text, images, or videos) to the webbsite. By posting content, yu grant
+            us a non-exclusive, roylty-free license to use, reproduce, modify, and display the content.
+            <br><br>
+            <div class="bold">6. Intellektual Propaty Rites </div><br>
+            All content on the webbsite, includin text, grafiks, logos, and images, is ownd by us or our content
+            providers and protekted by intellektual propaty laws.
+            <br><br>
+            <div class="bold">7. Limitashun of Liability </div><br>
+            We will not be liabl for any direct, indirect, incidental, special, or consequenshal damages arising from
+            yuor use of the webbsite.
+            <br><br>
+            <div class="bold">8. Terminashun </div><br>
+            We may terminat or suspend yuor akount and axis to the webbsite at any time, without notice or liability,
+            for any reason.
+            <br><br>
+            <div class="bold">9. Governing Law</div> <br>
+            These Turms shall be governed by and construd in accordance with the laws of the state without regard to its
+            conflict of law provisions.
+            <br><br>
+            <div class="bold">10. Contact Us </div><br>
+            If yu have any questions about these Turms, pleaze contact us at our support email.
+        </div>
+        <div class="buttons">
+            <div class="accept" onclick="closeModal('termsModal')">Accept</div>
+            <div class="decline" onclick="closeModal('termsModal')">Decline</div>
+        </div>
+    </div>
+    <div class="chat-bar-collapsible">
+        <button id="chat-button" type="button" class="collapsible">Chat with Friends!
+            <i id="chat-icon" style="color: #fff;" class="fa fa-fw fa-comments-o"></i>
+        </button>
+
+        <div class="content">
+            <div class="user-container">
+                <div class="searchbar">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" id="search-input" placeholder="Search Messages">
+                </div>
+                <div class="more">
+                    <div class="inbox">Inbox</div>
+                    <div class="message-request">Message Request</div>
+                </div>
+                <div class="messagescroll">
+                    <div class="messages">
+                        <div class="user-icon"></div>
+                        <div class="name-message">
+                            <div class="username">Adrian Santos</div>
+                            <div class="message" id="message">How is it going?</div>
+                        </div>
+                    </div>
+                    <div class="messages1">
+                        <div class="user-icon"></div>
+                        <div class="name-message">
+                            <div class="username">Kyle valenz</div>
+                            <div class="message">Hey girl...</div>
+                        </div>
+                    </div>
+                    <div class="messages1">
+                        <div class="user-icon"></div>
+                        <div class="name-message">
+                            <div class="username">Brent Manalo</div>
+                            <div class="message">Hello</div>
+                        </div>
+                    </div>
+                    <div class="messages1">
+                        <div class="user-icon"></div>
+                        <div class="name-message">
+                            <div class="username">Jake Montefalco</div>
+                            <div class="message">Sup beautiful?</div>
+                        </div>
+                    </div>
+                    <div class="messages1">
+                        <div class="user-icon"></div>
+                        <div class="name-message">
+                            <div class="username">Jake Montefalco</div>
+                            <div class="message">Hi?</div>
+                        </div>
+                    </div>
+                    <div class="messages1">
+                        <div class="user-icon"></div>
+                        <div class="name-message">
+                            <div class="username">Jake Montefalco</div>
+                            <div class="message">Sup baby girl?</div>
+                        </div>
+                    </div>
+                    <div class="messages1">
+                        <div class="user-icon"></div>
+                        <div class="name-message">
+                            <div class="username">Jake Montefalco</div>
+                            <div class="message">Are you there?
+                            </div>
+                        </div>
+                    </div>
+                    <div class="messages1">
+                        <div class="user-icon"></div>
+                        <div class="name-message">
+                            <div class="username">Jake Montefalco</div>
+                            <div class="message">Chat?</div>
+                        </div>
+                    </div>
+                    <div class="messages1">
+                        <div class="user-icon"></div>
+                        <div class="name-message">
+                            <div class="username">Jake Montefalco</div>
+                            <div class="message">Hello</div>
+                        </div>
+                    </div>
+                    <div class="messages1">
+                        <div class="user-icon"></div>
+                        <div class="name-message">
+                            <div class="username">Jake Montefalco</div>
+                            <div class="message">U free tonight?</div>
+                        </div>
+                    </div>
+                    <div class="messages1">
+                        <div class="user-icon"></div>
+                        <div class="name-message">
+                            <div class="username">Jake Montefalco</div>
+                            <div class="message">Hello</div>
+                        </div>
+                    </div>
+                    <div class="messages1">
+                        <div class="user-icon"></div>
+                        <div class="name-message">
+                            <div class="username">Jake Montefalco</div>
+                            <div class="message">Hello</div>
+                        </div>
+                    </div>
+                    <div class="messages1">
+                        <div class="user-icon"></div>
+                        <div class="name-message">
+                            <div class="username">Jake Montefalco</div>
+                            <div class="message">Hello</div>
+                        </div>
+                    </div>
+                    <div class="messages1">
+                        <div class="user-icon"></div>
+                        <div class="name-message">
+                            <div class="username">Jake Montefalco</div>
+                            <div class="message">Hello</div>
+                        </div>
+                    </div>
+                    <div class="messages1">
+                        <div class="user-icon"></div>
+                        <div class="name-message">
+                            <div class="username">Jake Montefalco</div>
+                            <div class="message">Hello</div>
+                        </div>
+                    </div>
+                    <div class="messages1">
+                        <div class="user-icon"></div>
+                        <div class="name-message">
+                            <div class="username">Jake Montefalco</div>
+                            <div class="message">Hello</div>
+                        </div>
+                    </div>
+                    <div class="messages1">
+                        <div class="user-icon"></div>
+                        <div class="name-message">
+                            <div class="username">Jake Montefalco</div>
+                            <div class="message">Hello</div>
+                        </div>
+                    </div>
+                    <div class="messages1">
+                        <div class="user-icon"></div>
+                        <div class="name-message">
+                            <div class="username">Jake Montefalco</div>
+                            <div class="message">Hello</div>
+                        </div>
+                    </div>
+                    <div class="messages1">
+                        <div class="user-icon"></div>
+                        <div class="name-message">
+                            <div class="username">Jake Montefalco</div>
+                            <div class="message">Hello</div>
+                        </div>
+                    </div>
+                    <div class="messages1">
+                        <div class="user-icon"></div>
+                        <div class="name-message">
+                            <div class="username">Jake Montefalco</div>
+                            <div class="message">Hello</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="full-chat-block">
+                <!-- Message Container -->
+                <div class="outer-container">
+                    <div class="user-info">
+                        <div class="user-icon"></div>
+                        <div class="name-message">
+                            <div class="username">Lucas Jones</div>
+                            <div class="message">Active</div>
+                        </div>
+                        <div class="icons">
+                            <i class="fa-solid fa-phone"></i>
+                            <i class="fa-solid fa-video"></i>
+                            <i class="fa-solid fa-circle-info"></i>
+                        </div>
+                    </div>
+                    <div class="chat-container">
+                        <!-- Messages -->
+                        <div id="chatbox">
+                            <h5 id="chat-timestamp"></h5>
+                            <p id="botStarterMessage" class="botText"><span>Loading...</span></p>
+                        </div>
+
+                        <!-- User input box -->
+                        <div class="chat-bar-input-block">
+                            <div id="userInput">
+                                <input id="textInput" class="input-box" type="text" name="msg"
+                                    placeholder="Tap 'Enter' to send a message">
+                                <p></p>
+                            </div>
+
+                            <div class="chat-bar-icons">
+                                <i id="chat-icon" style="color: crimson;" class="fa fa-fw fa-heart"
+                                    onclick="heartButton()"></i>
+                                <i id="chat-icon" style="color: #333;" class="fa fa-fw fa-send"
+                                    onclick="sendButton()"></i>
+                            </div>
+                        </div>
+
+                        <div id="chat-bar-bottom">
+                            <p></p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <script>
+        function closeModal(modalId) {
+            var modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.add('hidden');
+            }
+        }
+
+    </script>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="static/scripts/responses.js"></script>
+<script src="static/scripts/chat.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</html>
